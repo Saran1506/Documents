@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #f8b400, #f85f73);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .todo-app {
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    max-width: 100%;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  
+  button {
+    background: #f85f73;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #e03a4d;
+  }
+  
+  .input-area, .filter-area {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  input, select {
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f4f4f4;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  li.high {
+    border-left: 4px solid red;
+  }
+  
+  li.medium {
+    border-left: 4px solid orange;
+  }
+  
+  li.low {
+    border-left: 4px solid green;
+  }
+  
+  li button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Dark Mode */
+  body.dark {
+    background: linear-gradient(to bottom, #2e2e2e, #1f1f1f);
+    color: #ccc;
+  }
+  
+  body.dark .todo-app {
+    background: #333;
+    color: #fff;
+  }
+  
