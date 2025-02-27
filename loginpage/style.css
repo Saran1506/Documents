@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('Background_image.jpg');
+    background-size: cover;  /* Ensures the image covers the entire screen */
+    background-repeat: no-repeat;  /* Prevents repeating the image */
+    background-position: center;  /* Centers the image */
+}
+
+h1{
+    position:absolute;
+    left:375px;
+    top: 20px;
+    color: rgb(250, 243, 243);
+    background-color: rgba(42, 109, 103, 0.904);
+    font-size: 30px;
+    border: 5px solid rgb(44, 158, 252);
+    text-align: center;
+    font-family: 'Times New Roman';
+    border-radius: 15px;
+    width: 500px;
+    height: 40px;
+}
+
+.container {
+    width: 300px;
+    padding: 20px;
+    background: #a4c4ee;
+    box-shadow: 0px 0px 65px rgb(82, 87, 86);
+    border-radius: 8px;
+    position: relative;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.container::after, .container::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle),yellow, rgb(8, 36, 160),rgb(9, 238, 9), red);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 7px;
+    border-radius: 10px;
+    animation: spin 4s linear infinite;
+}
+
+.cointainer::before{
+    filter: blur(10rem);
+    opacity: 0.5;
+}
+@keyframes spin{
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg; 
+    }
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 90%;
+    padding: 8px;
+    border: 3px solid #f19fe4;
+    border-radius: 4px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background: #2d8df5;
+    color: #f7eea2;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: inset -2px -2px 2px rgba(3, 3, 3, 0.2),
+              inset 2px 5px 15px rgba(0,0,0,.5);
+}
+
+.btn:hover {
+    background: #0d31cf;
+    box-shadow: 0 0 45px rgb(12, 12, 12);
+  letter-spacing: 0.25em;
+}
+
+.switch, .forgot-password {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.switch a, .forgot-password a {
+    color: #0157b3;
+    cursor: pointer;
+}
+
+.message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+  ></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "caiJXIidwWXINbPFN",
+      });
+    })();
+  </script>
+</head>
+<body> 
+    <h1><b>Signup & Login page Creation</b></h1>
+    <div class="container" id="form-container">
+        <h2 id="form-title">Login</h2>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required="required">
+        </div>
+        <div class="form-group" id="password-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password" required="required">
+        </div>
+        <div class="form-group hidden" id="otp-group">
+            <label for="otp">OTP:</label>
+            <input type="text" id="otp" placeholder="Enter OTP">
+        </div>
+        <button class="btn" id="submit-btn">Login</button>
+        <div class="switch">
+            <span id="toggle-form">Don't have an account? <a>Sign Up</a></span>
+        </div>
+        <div class="forgot-password">
+            <span id="forgot-password">Forgot Password? <a>Reset</a></span>
+        </div>
+        <div class="message" id="message"></div>
+    </div>
+    <script src="script.js"></script>
+    </body>
+</html>
